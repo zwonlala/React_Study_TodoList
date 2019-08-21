@@ -1,21 +1,18 @@
 import React from 'react';
 
 class InputTodo extends React.Component {
-    
-  render(){
-    return (
-      <div>
-        <input 
-            type="text" 
-            id="input_input" 
-            value={this.props.input} 
-            onChange={this.props.input_listener}></input>
-        <button 
-            id="input_btn" 
-            onClick={this.props.btn_listener}>Add</button>
-      </div>
-    )
-  }
+    render() {
+        return (
+            <div>
+                <input
+                    type="text"
+                    value={this.props.input}
+                    onChange={this.props.input_listener}
+                />
+                <button onClick={this.props.btn_listener}>Add</button>
+            </div>
+        );
+    }
 }
 
 export default InputTodo;

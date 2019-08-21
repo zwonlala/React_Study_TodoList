@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function TodoItem({contents}) {
+function TodoItem({contents, index, onDelete}) {
     return (
         <li>
             {contents}
             <button>완료</button>
-            <button>제거</button>
+            <button onClick={() => onDelete(index)}>제거</button>
         </li>
     );
 }

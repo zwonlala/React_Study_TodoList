@@ -4,14 +4,16 @@ import TodoItem from './TodoItem';
 class TodoList extends React.Component {
     
   render() {
-    const lists = this.props.lists;
+    const items = this.props.items;
     return (
       <ul>
-        {lists.map(line => (
+        {items.map((item, index) => (
           <TodoItem 
-            contents={line.contents} 
-            completed={line.completed} 
-            id={line.id}/>
+            contents={item.contents} 
+            completed={item.completed} 
+            onDelete={this.props.onDelete}
+            key={index}
+            index={index} />
         ))}
       </ul>
     )
